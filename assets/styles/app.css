@@ -1,6 +1,37 @@
+button {
+    font-size: 16px;
+    padding: 1px 5px;
+    border: 0;
+}
 
+.blocks {
+    display: flex;
+    gap: 100px;
+}
 
-/**
-  * Loading (from 
- */
+button.blue {
+    background-color: #3b82f6;
+    color: #fff;
+}
 
+button.green {
+    background-color: darkkhaki;
+    color: #000;
+}
+
+button.pink {
+    background-color: #d381b2;
+    color: #000;
+}
+
+.blue {
+    color: #3b82f6;
+}
+
+.green {
+    color: darkkhaki;
+}
+
+.pink {
+    color: #d381b2;
+}

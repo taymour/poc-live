@@ -1,0 +1,20 @@
+<div
+        {{ attributes }}
+        data-url="{{ build_url(this.urlProps) }}"
+>
+    <h1>Multiply</h1>
+
+    <h2 class="green">Current factor : {{ this.factor }}</h2>
+
+    <button class="green" {{ live_action('changeFactor', { factor : 1 }) }}>1</button>
+    <button class="green" {{ live_action('changeFactor', { factor : 5 }) }}>5</button>
+    <button class="green" {{ live_action('changeFactor', { factor : 10 }) }}>10</button>
+
+    <ul>
+        {% for index, result in this.table %}
+            <li>
+                <strong class="green">{{ this.factor }}</strong> * <strong>{{ index }}</strong> = <strong>{{ result }}</strong>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
