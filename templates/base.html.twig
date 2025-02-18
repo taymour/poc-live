@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    {% block stylesheets %}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    {% endblock %}
+
+    {% block javascripts %}
+        {% block importmap %}{{ importmap('app') }}{% endblock %}
+    {% endblock %}
+    
+    <title>{% block title %}{{ _self }}{% endblock %}</title>
+</head>
+<body class="repro">
+{% block body %}
+    <header>
+        {{ include('_partials/header.html.twig') }}
+    </header>
+
+    <main>
+        <div class="container">
+            {% block content %}
+                
+                {#  .....   #}
+                
+            {% endblock %}
+        </div>
+    </main>
+
+    <footer>
+        {{ include('_partials/footer.html.twig') }}
+    </footer>
+{% endblock %}
+</body>
+</html>

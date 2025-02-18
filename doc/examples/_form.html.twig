@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+    <h1>Form</h1>
+
+    <section class="container--md">
+        {{ form_start(form) }}
+        
+        {% for _child in form %}
+            {{ form_row(_child) }}
+        {% endfor %}
+        
+        <div class="grid">
+            <button type="reset" class="outline secondary">Reset</button>
+            <button type="submit" class="secondary">Submit</button>
+        </div>
+        
+        {{ form_rest(form) }}
+        {{ form_end(form) }}
+    </section>
+
+{% endblock %}

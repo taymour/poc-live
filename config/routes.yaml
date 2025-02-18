@@ -1,0 +1,15 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+about:
+    path:          /about/{page?}
+    controller:    Symfony\Bundle\FrameworkBundle\Controller\TemplateController
+    defaults:
+        template:  'about.html.twig'
+        defaults:
+            page: 'about'
+    requirements:
+        page: '|usage|examples|admin|help'
