@@ -21,6 +21,7 @@
         "symfony/framework-bundle": "7.2.*",
         "symfony/http-foundation": "7.2.*",
         "symfony/http-kernel": "7.2.*",
+        "symfony/maker-bundle": "^1.62",
         "symfony/monolog-bundle": "^3.10",
         "symfony/routing": "7.2.*",
         "symfony/runtime": "7.2.*",
