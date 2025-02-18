@@ -1,4 +1,29 @@
 {% extends 'base.html.twig' %}
 {% block content %}
-    My Test
+    <div data-controller="url"></div>
+
+    <div>
+        <strong class="blue">Query string param</strong>
+        -
+        <strong class="green">Pathname param</strong>
+        -
+        <strong class="pink">Both Query & Pathname params</strong>
+    </div>
+
+    <hr>
+
+    <div class="blocks">
+        <div class="block">
+            <twig:Multiply factor="{{ factor }}" />
+        </div>
+        <div class="block">
+            <twig:Divide divider="{{ divider }}" />
+        </div>
+        <div class="block">
+            <twig:Add />
+        </div>
+        <div class="block">
+            <twig:Substract first="{{ first }}" />
+        </div>
+    </div>
 {% endblock %}

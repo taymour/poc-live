@@ -1,0 +1,26 @@
+<div
+        {{ attributes }}
+        data-url="{{ build_url(this.urlProps) }}"
+>
+    <h1>Divide</h1>
+
+    <h2 class="green">Current divider : {{ this.divider }}</h2>
+
+    <button class="green" {{ live_action('changeDivider', { divider : 2 }) }}>2</button>
+    <button class="green" {{ live_action('changeDivider', { divider : 3 }) }}>3</button>
+    <button class="green" {{ live_action('changeDivider', { divider : 4 }) }}>4</button>
+
+    <h2 class="blue">Current limit : {{ this.limit }}</h2>
+
+    <button class="blue" {{ live_action('changeLimit', { limit : 1 }) }}>1</button>
+    <button class="blue" {{ live_action('changeLimit', { limit : 4 }) }}>4</button>
+    <button class="blue" {{ live_action('changeLimit', { limit : 8 }) }}>8</button>
+
+    <ul>
+        {% for index, result in this.table %}
+            <li>
+                <strong class="green">{{ this.divider }}</strong> / <strong>{{ index }}</strong> = <strong>{{ result }}</strong>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

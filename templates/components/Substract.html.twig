@@ -1,0 +1,29 @@
+<div
+        {{ attributes }}
+        data-url="{{ build_url(this.urlProps) }}"
+>
+    <h1>Substract</h1>
+
+    <h2>
+        Current numbers :
+        <span class="green">{{ this.first }}</span>
+        -
+        <span class="blue">{{ this.second }}</span>
+    </h2>
+
+    <button class="pink" {{ live_action('changeNumbers', { first: 10, second: 1 }) }}>
+        10 - 2
+    </button>
+
+    <button class="pink" {{ live_action('changeNumbers', { first: 15, second: 5 }) }}>
+        15 - 5
+    </button>
+
+    <button class="pink" {{ live_action('changeNumbers', { first: 18, second: 3 }) }}>
+        18 - 3
+    </button>
+
+    <br>
+
+    <strong class="green">{{ this.first }}</strong> - <strong class="blue">{{ this.second }}</strong> = {{ this.result }}
+</div>
